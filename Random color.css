@@ -1,0 +1,35 @@
+.center {
+    margin-left: 27%;
+    margin-top: 25%;
+    margin-right: 65%;
+}
+#color{
+height:50px;
+width: 150px;
+color: blue;
+font-size: 30px;
+font-family: cursive;
+cursor: pointer;
+}
+#color:hover{
+    background-color: blue;
+    color: whitesmoke;
+    }
+div{
+    margin-left: 27%;
+    margin-top: 10%;
+    margin-right: 50%;
+    background-color: aliceblue;
+}
+#styling{
+height:40px;
+width: 350px;
+color: darkmagenta;
+font-size: 20px;
+font-family:fantasy;
+cursor: pointer;
+}
+#styling:hover{
+    background-color: darkmagenta;
+    color: white;
+}
