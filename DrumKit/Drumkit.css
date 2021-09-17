@@ -1,0 +1,57 @@
+* {
+  margin: 0rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://cdn.eventespresso.com/wp-content/uploads/2019/04/30141114/best-wordpress-themes-for-bands-musicians.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -280px;
+}
+
+.key {
+  border: 4px solid rgb(236, 233, 18);
+  box-shadow: inset 0px 5px 10px rgb(219, 217, 64);
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.3rem;
+  transition: all 0.09s ease-out;
+  width: 100px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background: none;
+  box-sizing: border-box;
+}
+
+
+.keys {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+span {
+  font-size: 1rem;
+}
+
+.playing {
+  transform: scale(1.3);
+  border-color: #2cecec;
+  box-shadow: 0 0 18px #ffffff;
+}
+
+kbd {
+  display: block;
+  font-size: 40px;
+}
+
+.sound {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #09fff3;
+}
