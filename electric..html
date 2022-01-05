@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>When Electricity ?</title>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-light bg-warning">
+        <div class="container">
+            <h2 class="text-light"> Who discovered electricity ?</h2>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <p><strong>Electricity</strong> is a form of energy and it occurs in nature, so it was not “invented.” As to who
+            discovered it,
+            many misconceptions abound. Some give credit to <b> Benjamin Franklin </b>for discovering electricity, but
+            his
+            experiments only helped establish the connection between lightning and electricity, nothing more.
+        </p>
+        <p>The truth about the discovery of electricity is a bit more complex <span class="fst-italic">than a man flying
+                his kite</span>. It actually goes back more than two thousand years.</p>
+        <figure class="figure float-end">
+            <img id="Image" onclick="turnOnOff()" src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg"
+                    class="figure-img img-fluid rounded" alt="bulb">
+            <figcaption class="figure-caption">Click on the Bulb.</figcaption>
+        </figure>
+        <hr>
+        <p>In about<mark> 600 BC</mark>, the Ancient Greeks discovered that rubbing fur on amber (fossilized tree resin)
+            caused an
+            attraction between the two – and so what the Greeks discovered was actually <strong>static</strong>
+            electricity.
+            Additionally, researchers and archeologists in the<mark> 1930’s</mark> discovered pots with sheets of copper
+            inside that
+            they believe may have been ancient batteries meant to produce light at<span class="fst-italic"> ancient
+                Roman sites</span>. Similar
+            devices
+            were found in archeological digs near Baghdad meaning ancient Persians may have also used an early form of
+            batteries <br> But by the<mark> 17th century</mark>, many electricity-related discoveries had been made,
+            such as the
+            invention of an early electrostatic generator, the differentiation between positive and negative currents,
+            and the classification of materials as conductors or insulators.</p>
+        <p>In the year<mark> 1600</mark>, English physician <strong>William Gilbert</strong> used the Latin word
+            <mark>“electricus”</mark> to describe the force
+            that certain substances exert when rubbed against each other. A few years later another English scientist,
+            <strong>Thomas Browne</strong>, wrote several books and he used the word “electricity” to describe his
+            investigations based
+            on Gilbert’s work.</p>
+        <p><mark>In 1752</mark>, Ben Franklin conducted his experiment with a kite, a key, and a storm. This simply
+            proved that
+            lightning and tiny electric sparks were the same thing.</p>
+        <p>Italian physicist <strong> Alessandro Volta</strong> discovered that particular chemical reactions could
+            produce electricity,
+            and in<mark> 1800</mark> he constructed the voltaic pile (an early electric battery) that produced a steady
+            electric
+            current, and so he was the first person to create a steady flow of electrical charge. <span
+                class="fst-italic">Volta also created
+                the
+                first transmission of electricity by linking positively-charged and negatively-charged connectors and
+                driving an electrical charge, or voltage, through them.</span></p>
+        <p><mark>In 1831</mark> electricity became viable for use in technology when <strong> Michael Faraday</strong>
+            created the electric dynamo (a
+            crude power generator), which solved the problem of generating electric current in an ongoing and practical
+            way. Faraday’s rather crude invention used a magnet that was moved inside a coil of copper wire, creating a
+            tiny electric current that flowed through the wire. This opened the door to American<strong> Thomas
+                Edison</strong> and
+            British scientist<strong> Joseph Swan</strong> who each invented the incandescent filament light bulb in
+            their respective
+            countries in about<mark> 1878</mark>. Previously, light bulbs had been invented by others, but the
+            incandescent bulb was
+            the first practical bulb that would light for hours on end.</p>
+        <p>Later in the<mark> 1800’s</mark> and<mark> early 1900’s</mark> Serbian American engineer, inventor, and all
+            around electrical wizard
+            <strong> Nikola Tesla</strong> became an important contributor to the birth of commercial electricity. He
+            worked with Edison
+            and later had many revolutionary developments in electromagnetism, and had competing patents with<strong>
+                Marconi</strong>
+            for the invention of radio. He is well known for his work with alternating current (AC), AC motors, and the
+            polyphase distribution system.</p>
+
+    </div>
+    <script>
+        function turnOnOff() {
+            var image = document.getElementById('Image');
+
+            if (image.src.match("ONbulb")) {
+                image.src = "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg"
+            } else {
+                image.src = "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg"
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
