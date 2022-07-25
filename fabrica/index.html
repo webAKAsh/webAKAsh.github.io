@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="fabric.js"></script>
+    <title>Fabric</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="800"
+      height="450"
+      style="border: 1px solid #000000"
+    ></canvas>
+    <form>
+      <div>
+        <input
+          type="file"
+          accept="image/*"
+          id="choose-file"
+          name="choose-file"
+        />
+      </div>
+    </form>
+    <script>
+      var canvas = new fabric.Canvas("canvas");
+      const chooseFile = document.getElementById("choose-file");
+
+      chooseFile.addEventListener("change", function () {
+        getImgData();
+      });
+
+      function getImgData() {
+        canvas.on("mouse:wheel", function (opt) {
+          var delta = opt.e.deltaY;
+          var zoom = canvas.getZoom();
+          zoom *= 0.999 ** delta;
+          if (zoom > 0.9999999) zoom = 0.9999999;
+          if (zoom < 0.01) zoom = 0.01;
+
+          canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
+          opt.e.preventDefault();
+          opt.e.stopPropagation();
+
+          var vpt = this.viewportTransform
+          if (zoom < 400 / 1000) {
+            console.log("one", zoom)
+            vpt[4] = 200 - 1000 * zoom / 2;
+            vpt[5] = 200 - 1000 * zoom / 2;
+            } else {
+                console.log("two", zoom)
+                if (vpt[4] >= 0) {
+                    vpt[4] = 0;
+                } else if (vpt[4] < canvas.getWidth() - 1000 * zoom) {
+                    vpt[4] = canvas.getWidth() - 1000 * zoom;
+                }
+                if (vpt[5] >= 0) {
+                    vpt[5] = 0;
+                } else if (vpt[5] < canvas.getHeight() - 1000 * zoom) {
+                    vpt[5] = canvas.getHeight() - 1000 * zoom;
+                }
+            }
+          canvas.setZoom(zoom)
+        })
+
+        const files = chooseFile.files[0];
+        if (files) {
+          const fileReader = new FileReader();
+          fileReader.readAsDataURL(files);
+          fileReader.addEventListener("load", function () {
+            fabric.Image.fromURL(this.result, (oImg) => {
+                canvas.setBackgroundImage(oImg, canvas.renderAll.bind(canvas), {
+                    scaleX : canvas.width / oImg.width,
+                    scaleY : canvas.height / oImg.height
+                }, { crossOrigin: 'Anonymous' })
+
+              canvas.add(oImg);
+            });
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
