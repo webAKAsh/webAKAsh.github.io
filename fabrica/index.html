@@ -37,7 +37,7 @@
           var delta = opt.e.deltaY;
           var zoom = canvas.getZoom();
           zoom *= 0.999 ** delta;
-          if (zoom > 0.9999999) zoom = 0.9999999;
+          if (zoom > 10) zoom = 10;
           if (zoom < 0.01) zoom = 0.01;
 
           canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
