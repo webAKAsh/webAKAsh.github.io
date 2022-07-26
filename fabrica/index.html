@@ -46,20 +46,20 @@
 
           var vpt = this.viewportTransform
           if (zoom < 400 / 1000) {
-            console.log("one", zoom)
-            vpt[4] = 200 - 1000 * zoom / 2;
-            vpt[5] = 200 - 1000 * zoom / 2;
+            vpt[4] = 1000 - 1000 * zoom / 2;
+            vpt[5] = 1000 - 1000 * zoom / 2;
             } else {
-                console.log("two", zoom)
                 if (vpt[4] >= 0) {
                     vpt[4] = 0;
-                } else if (vpt[4] < canvas.getWidth() - 1000 * zoom) {
-                    vpt[4] = canvas.getWidth() - 1000 * zoom;
+                } else if (vpt[4] < canvas.getWidth() - 1000 * zoom/2) {
+                  vpt[4] = canvas.getWidth() - 1000 * zoom/2;
+                  console.log("vpt[4]", vpt[4])
                 }
                 if (vpt[5] >= 0) {
                     vpt[5] = 0;
-                } else if (vpt[5] < canvas.getHeight() - 1000 * zoom) {
-                    vpt[5] = canvas.getHeight() - 1000 * zoom;
+                } else if (vpt[5] < canvas.getHeight() - 1000 * zoom/2) {
+                  vpt[5] = canvas.getHeight() - 1000 * zoom/2;
+                  console.log("vpt[5]", vpt[5])
                 }
             }
           canvas.setZoom(zoom)
