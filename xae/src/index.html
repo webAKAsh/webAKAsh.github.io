@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+      .bgImage{
+        background-position: bottom;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-r from-[#2C4550] to-[#0C0C0C] text-white">
+    <div class="sm:grid sm:grid-cols-9 2xl:m-40 2xl:border-white 2xl:rounded-3xl 2xl:border-4">
+      <div
+        class="mx-6 my-3 sm:m-0 sm:col-span-1 flex justify-between items-center sm:flex-col sm:border-r-2 border-white sm:py-4"
+      >
+        <h1 class="text-6xl font-semibold sm:text-4xl lg:text-6xl">Xae</h1>
+        <img src="../assets/navbtn.png" alt="navbtn" id="navBtn" class="sm:hidden">
+        <div
+          class="hidden sm:flex flex-col items-center h-32 space-y-4"
+        >
+          <img src="../assets/f.png" alt="facebook" />
+          <img src="../assets/insta.png" alt="insta" />
+          <img src="../assets/tit.png" alt="tit" />
+        </div>
+      </div>
+      <div class="sm:col-span-8">
+        <div id="navBar" class="hidden my-2 sm:my-0 sm:flex sm:justify-end bg-gradient-to-t from-[#00000065] to-[#00000083] backdrop-blur-md 2xl:rounded-tr-3xl">
+          <ul class="flex justify-center items-center flex-col sm:flex sm:flex-row sm:justify-around sm:space-x-6 sm:m-8 py-4 sm:py-0">
+            <li class="text-xl font-bold hover:border-b-2 border-white m-0">
+              Home
+            </li>
+            <li class="text-xl font-bold hover:border-b-2 border-white m-0">
+              About
+            </li>
+            <li class="text-xl font-bold hover:border-b-2 border-white m-0">
+              Gallery
+            </li>
+            <li class="text-xl font-bold hover:border-b-2 border-white m-0">
+              Contact
+            </li>
+          </ul>
+        </div>
+        <div
+          class="bgImage w-full bg-auto bg-no-repeat bg-[url('/assets/bot.png')] lg:bg-pyramid pt-16"
+        >
+          <div class="pt-56 pb-8 px-8 md:max-w-sm md:ml-12 xl:max-w-xl xl:mb-32 xl:ml-24">
+            <h1 class="text-3xl sm:text-6xl font-bold">
+              Adventure <br />
+              Together
+            </h1>
+            <p class="text-xl py-2 sm:p-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Placerat id potenti faucibus nec, rhoncus, vulputate vitae.
+              Dictum rutrum ut cras nullam porta id dolor arcu, quis.
+            </p>
+          </div>
+          <div
+            class="w-full space-x-3 flex justify-around bg-gradient-to-t from-[#00000065] to-[#00000083] backdrop-blur-xl 2xl:rounded-br-3xl"
+          >
+            <div class="sm:h-48">
+              <img alt="moon" class="h-full" src="/assets/moon.png" />
+            </div>
+            <div class="self-center lg:w-96">
+              <h2 class="text-2xl">Exploration</h2>
+              <p class="text-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Placerat id potenti faucibus nec, rhoncus, vulputate
+              </p>
+            </div>
+            <div class="w-64 self-center hidden md:block">
+              <h2 class="text-2xl">Footprint</h2>
+              <p class="text-md">Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="../assets/mobilepro.png" alt="mobilepro" class="hidden 2xl:block 2xl:absolute 2xl:top-96 2xl:right-12 2xl:float-right"/>
+    <script>
+      let navBtn = document.getElementById('navBtn')
+      navBtn.addEventListener('click',() => {
+        let navBar = document.getElementById('navBar')
+        navBar.classList.toggle('hidden')
+      })
+    </script>
+  </body>
+</html>
