@@ -1,5 +1,6 @@
 BEGIN:VCARD
 VERSION:3.0
+PHOTO;VALUE=uri:./nodo.jpeg
 FN;CHARSET=UTF-8:Shoko Nodo
 N;CHARSET=UTF-8:Nodo;Shoko;;;
 EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:shoko.noda@undp.org
