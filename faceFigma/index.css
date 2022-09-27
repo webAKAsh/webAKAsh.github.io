@@ -1,0 +1,77 @@
+.redFace {
+    width: 100%;
+  }
+  .qrCode {
+    height: 58.25999999999999px;
+  }
+  .share {
+    height: 58.25999999999999px;
+  }
+  .poweredBy{
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .techworks_Logo {
+    height: 69.78999999999999px;
+  }
+  .clickanleBtn1 {
+    position: absolute;
+    right: 3rem;
+    padding: 1.25rem;
+    background-color: gray;
+    bottom: 13rem;
+    border: none;
+    border-radius: 100%;
+  }
+  .clickanleBtn2 {
+    position: absolute;
+    right: 3rem;
+    padding: 1.25rem;
+    background-color: gray;
+    bottom: 4rem;
+    border: none;
+    border-radius: 100%;
+  }
+  .redLipstick{
+    width: 432px;
+    height: 432px;
+    rotate: 330deg;
+    align-self: center;
+  }
+
+  .cardHeader{
+    text-align: center;
+    font-size: 2.9rem;
+    font-weight: 700;
+  }
+  .cardPara{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+  }
+  .parentSwiper{
+    position: relative;
+    width: 1080px;
+    height: 620px;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .swiper-slide{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.5;
+  }
+  .swiper-slide-active {
+    transform: scale(3);
+    opacity: 1;
+  }
