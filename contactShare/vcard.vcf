@@ -3,11 +3,11 @@ VERSION:3.0
 FN;CHARSET=UTF-8:Shoko Noda
 N;CHARSET=UTF-8:Noda;Shoko;;;
 GENDER:F
-EMAIL;CHARSET=UTF-8;type=EMAIL,Email:shoko.noda@undp.org
-TEL;TYPE=CELL:+91 93194 77177
+EMAIL;CHARSET=UTF-8;type=Email,Email:shoko.noda@undp.org
+TEL;TYPE=Cell:+91 93194 77177
 ROLE;CHARSET=UTF-8:Resident Representative\, India
 ORG;CHARSET=UTF-8:UNDP
-URL;type=WORK;CHARSET=UTF-8:http://www.undp.org/india
+URL;type=Website;CHARSET=UTF-8:http://www.undp.org/india
 X-SOCIALPROFILE;TYPE=twitter:https://twitter.com/shokonoda
 REV:2022-09-28T05:29:59.241Z
 END:VCARD
