@@ -4,7 +4,7 @@ FN;CHARSET=UTF-8:Shoko Noda
 N;CHARSET=UTF-8:Noda;Shoko;;;
 GENDER:F
 EMAIL;CHARSET=UTF-8;type=Email,Email:shoko.noda@undp.org
-TEL;TYPE=Cell:+91 93194 77177
+TEL;type=Cell,Cell:+91 93194 77177
 ROLE;CHARSET=UTF-8:Resident Representative\, India
 ORG;CHARSET=UTF-8:UNDP
 URL;type=Website;CHARSET=UTF-8:http://www.undp.org/india
