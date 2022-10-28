@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keypress</title>
+    <style>
+        body{
+            background-color: azure;
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        button{
+            background-color: cornflowerblue;
+            color: white;
+            border: 1px solid cornflowerblue;
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            margin: 2rem 0rem;
+        }
+        button:hover{
+            color: cornflowerblue;
+            background-color: white;
+            border: 1px solid cornflowerblue;
+        }
+        .carryBtn{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            align-items: center;
+        }
+        #buttonPress{
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 1rem;
+            font-style: italic;
+            color: green;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="carryBtn">
+        <button>A</button>
+        <button>S</button>
+        <button>D</button>
+    </div>
+    <div id="buttonPress"></div>
+    <div class="carryBtn">
+        <button>J</button>
+        <button>K</button>
+        <button>L</button>
+    </div>
+    <script>
+        const clickedButtons = document.querySelectorAll("button")
+        const buttonPress = document.querySelector("#buttonPress")
+
+        clickedButtons.forEach((e) => {
+            e.addEventListener("click",(e) => {
+                buttonPress.innerHTML = e.target.innerHTML
+            })
+            
+        })
+        onkeydown = (e) => {
+            buttonPress.innerHTML = e.key
+        }
+    </script>
+</body>
+</html>
