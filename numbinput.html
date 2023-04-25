@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex justify-center items-center h-screen">
+    <div class="flex justify-center items-center p-4 space-y-1 flex-col">
+      <input
+        class="border rounded border-indigo-400 pl-2 py-1 text-base"
+        type="number"
+        id="numbInput"
+      />
+      <span id="hint" class="text-xs self-start"></span>
+    </div>
+    <script>
+      const numbInput = document.getElementById("numbInput");
+      const hint = document.getElementById("hint");
+
+      const numberRegex = /^\d+$/;
+      const oddNumb = /^\d*[13579]$/;
+      const evenNumb = /^\d*[02468]$/;
+
+      numbInput.addEventListener("input", (e) => {
+        let numb = Number(e.target.value);
+
+        //Condition for checking the Positive numbers
+        if (numberRegex.test(numb)) {
+          let newNumb = [];
+
+        //   Below function Add consecutive three numbers either Odd or Even in newNumb Array,
+        //   if Input is empty by default treated as 0.
+
+          function afterThree(anyNumb) {
+            for (let i = 0; i < 3; i++) {
+              anyNumb += 2;
+              newNumb.push(anyNumb);
+            }
+          }
+
+          //Condition for checking the Odd numbers
+          if (oddNumb.test(numb)) {
+            afterThree(numb);
+            hint.innerText = newNumb;
+          }
+
+          //Condition for checking the Even numbers
+          if (evenNumb.test(numb)) {
+            afterThree(numb);
+            hint.innerText = newNumb;
+          }
+
+
+        // Below Logic is also valid and easy to understand for usage.....
+
+        //   if (numb % 2 == 0) {
+        //     afterThree(numb);
+        //     hint.innerText = newNumb;
+        //   } else {
+        //     afterThree(numb);
+        //     hint.innerText = newNumb;
+        //   }
+
+        } else {
+          hint.innerText = "Pleae enter Positive Number";
+        }
+      });
+    </script>
+  </body>
+</html>
