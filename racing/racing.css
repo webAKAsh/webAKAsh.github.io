@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lobster", cursive;
+}
+.game {
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.hide {
+  display: none;
+}
+.startScreen {
+  width: 400px;
+  height: 107px;
+  line-height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin: auto;
+  background-color: rgb(43, 205, 226);
+  text-align: center;
+  border-bottom: 2px solid rgb(132, 197, 197);
+}
+.ClickToStart {
+  cursor: pointer;
+}
+.gameArea {
+  height: 100vh;
+  width: 400px;
+  margin: auto;
+  position: relative;
+  background-color: rgb(32, 32, 32);
+  overflow: hidden;
+  border-left: 4px dashed white;
+  border-right: 4px dashed white;
+}
+.car {
+  background: url("./car.png");
+  transform: rotate(-90deg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 50px;
+  width: 60px;
+  position: absolute;
+  top: 520px;
+  background-color: transparent;
+  border: 1px solid white;
+  /* border-radius: 9999px; */
+}
+.Opponents {
+  background: url("./oppo.png");
+  background-color: transparent !important;
+  border: 1px solid white;
+  /* border-radius: 9999px; */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 75px;
+  width: 50px;
+  position: absolute;
+  top: 520px;
+}
+.roadLines {
+  height: 100px;
+  width: 10px;
+  background-color: white;
+  position: absolute;
+  margin-left: 195px;
+}
+
+.profile_card {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  padding: 1rem;
+  border: 5px solid black;
+  background-color: rgb(32, 32, 32);
+  width: 30%;
+  border-radius: 10px;
+}
+
+.scordBoard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.score,
+.highScore {
+  text-align: center;
+  background-color: rgb(100, 224, 156);
+  width: 200px;
+  color: rgb(59, 40, 40);
+  line-height: 40px;
+  border-radius: 4px;
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.card_header img {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.subtitle1,
+.subtitle2 {
+  font-size: 1.2rem;
+}
+
+.card_text {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.info_card {
+  position: absolute;
+  top: 2px;
+  right: 3.5px;
+  padding: 0.5rem 1rem;
+  border: 5px solid black;
+  background-color: rgb(32, 32, 32);
+  width: 30%;
+  border-radius: 10px;
+}
+
+.info_body {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.InfoText {
+  margin-bottom: 0.7rem;
+  line-height: 1.4rem;
+}
+
+.icons,
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 0.7rem;
+}
