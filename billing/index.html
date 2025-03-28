@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+      }
+      .container {
+        max-width: 400px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #ff6680;
+        position: relative;
+        text-transform: uppercase;
+      }
+      h2::before,
+      h2::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        height: 1px;
+        background: #ddd;
+      }
+      h2::before {
+        left: 0;
+      }
+      h2::after {
+        right: 0;
+      }
+      .card {
+        border: 2px solid #ddd;
+        margin-bottom: 15px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+      }
+      .active {
+        border-color: #ff6680;
+      }
+      .discount {
+        background: #ff6680;
+        color: white;
+        padding: 2px 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+      .price-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .price {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .sub-price {
+        text-decoration: line-through;
+        color: gray;
+        font-size: 14px;
+      }
+      .details {
+        display: none;
+        margin-top: 10px;
+        text-align: left;
+
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+      }
+      .active .details {
+        display: block;
+        max-height: 500px;
+      }
+      .select-box {
+        margin: 5px 0;
+        width: 100%;
+        padding: 5px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+      }
+      .active .select-box {
+        border-color: #ff6680;
+      }
+      .btn {
+        background: #ff6680;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .selected-price {
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .flex {
+        display: flex;
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .justify-evenly {
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>YAY! It's BOGO</h2>
+
+      <div class="card" onclick="selectCard(1)">
+        <div class="price-container">
+          <div class="flex">
+            <input type="radio" name="unit" />
+            <div class="flex flex-col">
+              <div class="flex">
+                <b>1 Unit</b>
+                <span class="discount">10% Off</span>
+              </div>
+              <small>Standard Price</small>
+            </div>
+          </div>
+          <div>
+            <span class="price">$10.00 USD</span><br />
+            <span class="sub-price">$24.00 USD</span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="flex justify-evenly">
+            <div>
+              <label>Size:</label>
+              <select class="select-box size-select">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select class="select-box size-select">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+            </div>
+            <div>
+              <label>Colour:</label>
+              <select class="select-box color-select">
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+              <select class="select-box color-select">
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card active" onclick="selectCard(2)">
+        <div class="price-container">
+          <div class="flex">
+            <input type="radio" name="unit" checked />
+            <div class="flex flex-col">
+              <div class="flex">
+                <b>2 Unit</b>
+                <span class="discount">20% Off</span>
+              </div>
+              <small>Standard Price</small>
+            </div>
+          </div>
+          <div>
+            <span class="price">$18.00 USD</span><br />
+            <span class="sub-price">$24.00 USD</span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="flex justify-evenly">
+            <div>
+              <label>Size:</label>
+              <select class="select-box size-select">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select class="select-box size-select">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+            </div>
+            <div>
+              <label>Colour:</label>
+              <select class="select-box color-select">
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+              <select class="select-box color-select">
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" onclick="selectCard(3)">
+        <div class="price-container">
+          <div class="flex">
+            <input type="radio" name="unit" />
+            <div class="flex flex-col">
+              <div class="flex">
+                <b>3 Unit</b>
+                <span class="discount">30% Off</span>
+              </div>
+              <small>Standard Price</small>
+            </div>
+          </div>
+          <div>
+            <span class="price">$24.00 USD</span><br />
+            <span class="sub-price">$24.00 USD</span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="flex justify-evenly">
+            <div>
+              <label>Size:</label>
+              <select class="select-box size-select">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select class="select-box size-select">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+            </div>
+            <div>
+              <label>Colour:</label>
+              <select class="select-box color-select">
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+              <select class="select-box color-select">
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-price flex">
+        <p style="color: #ff6680">Free Delivery</p>
+        <p>Total: $18.00 USD</p>
+      </div>
+      <button class="btn" onclick="addToCart()">+ Add to Cart</button>
+    </div>
+
+    <script>
+      function selectCard(index) {
+        let cards = document.querySelectorAll(".card");
+        let prices = [10, 18, 24];
+
+        cards.forEach((card, i) => {
+          let radioInput = card.querySelector("input[type='radio']");
+          if (i + 1 === index) {
+            card.classList.add("active");
+            radioInput.checked = true; // Select the radio input of the clicked card
+
+            // Update only the total price text (second <p> in .selected-price)
+            document.querySelector(
+              ".selected-price p:nth-child(2)"
+            ).textContent = `Total: $${prices[i]}.00 USD`;
+          } else {
+            card.classList.remove("active");
+          }
+        });
+      }
+
+      function addToCart() {
+        const activeCard = document.querySelector(".card.active");
+        if (!activeCard) {
+          alert("Please select a unit first.");
+          return;
+        }
+
+        const unit = activeCard.querySelector("b").textContent;
+        const price = activeCard.querySelector(".price").textContent;
+        const sizeSelects = activeCard.querySelectorAll(".size-select");
+        const colorSelects = activeCard.querySelectorAll(".color-select");
+
+        let selectedSizes = [];
+        sizeSelects.forEach((select) => {
+          selectedSizes.push(select.value);
+        });
+
+        let selectedColors = [];
+        colorSelects.forEach((select) => {
+          selectedColors.push(select.value);
+        });
+
+        let message = `Item Added to Cart:\n`;
+        message += `Unit: ${unit}\n`;
+        message += `Price: ${price}\n`;
+        message += `Sizes: ${selectedSizes.join(", ")}\n`;
+        message += `Colors: ${selectedColors.join(", ")}`;
+
+        alert(message);
+      }
+    </script>
+  </body>
+</html>
